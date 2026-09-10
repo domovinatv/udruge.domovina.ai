@@ -1,7 +1,7 @@
 # udruge.domovina.ai — orkestracija pipelinea. `make help` za popis.
 # `make all` radi bez ijednog API ključa. `make rno` ide na mrežu (MFIN), pa je zaseban.
 
-.PHONY: help init ingest geocode rno export stats all all-rno test clean-cache
+.PHONY: help init ingest geocode rno export export-web sync-karta stats all all-rno test clean-cache
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | awk 'BEGIN{FS=":.*?## "}{printf "  \033[36m%-12s\033[0m %s\n", $$1, $$2}'
@@ -25,12 +25,20 @@ export: ## FTS + GeoJSON + CSV
 	uv run python scripts/31_export_geojson.py
 	uv run python scripts/32_export_csv.py
 
+sync-karta: ## preslikaj udruge.geojson u ../karta-hrvatske (gis.domovina.ai)
+	uv run python scripts/33_sync_karta.py
+
 stats: ## izvještaj o pokrivenosti (+ data/exports/stats.json)
 	uv run python scripts/40_stats.py
 
-all: init ingest geocode export stats ## cijeli pipeline od nule (bez ključeva)
+# Ide POSLIJE `stats`: 34 ne računa brojke nego preuzima data/exports/stats.json
+# i odbija raditi ako je zastario.
+export-web: ## statički JSON za frontend/ (traži prethodni `make stats`)
+	uv run python scripts/34_export_static.py
 
-all-rno: init ingest geocode rno export stats ## kao `all` + RNO kontakti
+all: init ingest geocode export sync-karta stats export-web ## cijeli pipeline od nule (bez ključeva)
+
+all-rno: init ingest geocode rno export sync-karta stats export-web ## kao `all` + RNO kontakti
 
 test: ## pytest
 	uv run pytest -q

@@ -63,6 +63,9 @@ def title_case_hr(s: str) -> str:
     """
     if not s:
         return s
+    # Registar zna upisati razmak unutar navodnika: '" Magnificat"' → '"Magnificat"'.
+    s = re.sub(r'"\s*([^"]*?)\s*"', r'"\1"', s)
+    s = re.sub(r"„\s*([^”\"]*?)\s*([”\"])", r"„\1\2", s)
     if s != s.upper():
         return " ".join(s.split())
     keep_upper = {"BDM", "OFM", "OP", "SJ", "OSB", "OCD", "SDB", "HR", "RH", "HKD",

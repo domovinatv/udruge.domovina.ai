@@ -24,5 +24,10 @@ def test_title_case_cuva_navodnike_i_kratice():
     assert title_case_hr("ŽUPA SV. ANE I FSR") == "Župa sv. Ane i FSR"
 
 
+def test_title_case_skida_razmak_unutar_navodnika():
+    assert title_case_hr('" Magnificat"') == '"Magnificat"'
+    assert title_case_hr('UDRUGA " KRUNA " STUBALJ') == 'Udruga "Kruna" Stubalj'
+
+
 def test_title_case_ne_dira_mjesovita_slova():
     assert title_case_hr("Udruga Padre Pio") == "Udruga Padre Pio"

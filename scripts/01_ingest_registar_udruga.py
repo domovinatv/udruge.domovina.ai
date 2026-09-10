@@ -98,9 +98,9 @@ def run() -> None:
             )
             # Prosudba se UVIJEK prepisuje (COALESCE bi zadržao staru ocjenu).
             conn.execute(
-                "UPDATE udruge SET catholic_score=?, catholic_confidence=?, catholic_signals=?, "
+                "UPDATE udruge SET display_name=?, catholic_score=?, catholic_confidence=?, catholic_signals=?, "
                 "category=?, status=?, status_date=?, president=?, president_role=? WHERE id=?",
-                (a["catholic_score"], a["catholic_confidence"], a["catholic_signals"],
+                (title_case_hr(name), a["catholic_score"], a["catholic_confidence"], a["catholic_signals"],
                  a["category"], (r.get("STATUS") or "").strip() or None,
                  iso_date(r.get("DATUM_STATUSA")), president, role, uid),
             )

@@ -85,9 +85,9 @@ def run() -> None:
                 **a,
             )
             conn.execute(
-                "UPDATE udruge SET catholic_score=?, catholic_confidence=?, catholic_signals=?, "
+                "UPDATE udruge SET display_name=?, catholic_score=?, catholic_confidence=?, catholic_signals=?, "
                 "category=?, status=?, president=?, president_role=? WHERE id=?",
-                (a["catholic_score"], a["catholic_confidence"], a["catholic_signals"],
+                (title_case_hr(name), a["catholic_score"], a["catholic_confidence"], a["catholic_signals"],
                  a["category"], status, president, role, uid))
             replace_osobe(conn, uid, persons)
             seen_ids.add(udr_id)

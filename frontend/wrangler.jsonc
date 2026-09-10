@@ -1,0 +1,37 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+
+  // Ovo postaje udruge-domovina.<subdomena>.workers.dev; produkcijska domena
+  // je niže, u "routes".
+  "name": "udruge-domovina",
+
+  // Račun D.O.M. — isti kao gis-domovina i klubovi-domovina. Eksplicitno jer
+  // je ovaj OAuth token vezan na više računa, pa bi wrangler inače tražio
+  // izbor i pao u neinteraktivnom pokretanju (deploy.sh, CI).
+  "account_id": "7dc7167b7e2e00923bfa7cd697df14e4",
+
+  "compatibility_date": "2026-08-01",
+  "compatibility_flags": ["nodejs_compat"],
+
+  "observability": { "enabled": true },
+
+  // Produkcijska domena. `custom_domain: true` znači da wrangler pri deployu
+  // sam napravi DNS zapis i certifikat u zoni domovina.ai — ne treba ručno
+  // kačenje u dashboardu. Zona mora biti na istom računu (D.O.M.).
+  "routes": [{ "pattern": "udruge.domovina.ai", "custom_domain": true }],
+
+  // Eksplicitno true: čim postoji "routes", wrangler workers.dev ISKLJUČUJE po
+  // defaultu. Poddomena je jedina adresa na kojoj se deploy može provjeriti
+  // dok se certifikat za novu domenu još izdaje, pa ostaje uključena.
+  "workers_dev": true,
+
+  // NAMJERNO nema "main" ni "assets": Nitro ih generira sam u
+  // .output/server/wrangler.json i tamošnje vrijednosti pobjeđuju.
+  // Sve ostalo odavde (name, compat, flags, vars, bindings) se preuzima.
+  //
+  // `wrangler deploy` iz roota radi jer build zapiše .wrangler/deploy/config.json
+  // koji preusmjerava wrangler na generirani config.
+  //
+  // Ovaj Worker NEMA nijedan secret ni binding: katalog je statički JSON u
+  // assetima (public/data/, ~870 datoteka), a nijedan izvor ne traži ključ.
+}

@@ -129,8 +129,8 @@ def run() -> None:
                 category=categorize(name),
                 source=merge_source(existing["source"] if existing else None, SOURCE),
             )
-            conn.execute("UPDATE udruge SET status=?, category=? WHERE id=?",
-                         (status, categorize(name), uid))
+            conn.execute("UPDATE udruge SET status=?, category=?, display_name=? WHERE id=?",
+                         (status, categorize(name), title_case_hr(name), uid))
             if rid is not None:
                 seen.add(rid)
             stats["ok"] += 1
