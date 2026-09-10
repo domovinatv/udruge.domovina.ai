@@ -1,0 +1,138 @@
+{
+  "udruge_katalog": 864,
+  "udruge_aktivne": 602,
+  "udruge_ugasene": 262,
+  "za_pregled_niska": 333,
+  "po_pouzdanosti": {
+    "niska": 333,
+    "srednja": 527,
+    "visoka": 337
+  },
+  "po_registru": {
+    "evidencija-kc": 22,
+    "registar-udruga": 835,
+    "strane-udruge": 7
+  },
+  "po_registru_aktivne": {
+    "evidencija-kc": 17,
+    "registar-udruga": 581,
+    "strane-udruge": 4
+  },
+  "s_koordinatama": 861,
+  "po_izvoru_koordinata": {
+    "dgu-adresa": 722,
+    "naselje-teziste": 128,
+    "dgu-ulica-fuzzy": 11
+  },
+  "s_biskupijom": 861,
+  "s_oib": 840,
+  "s_emailom": 462,
+  "s_webom": 126,
+  "s_telefonom": 485,
+  "s_predsjednikom": 591,
+  "s_rno": 604,
+  "po_kategoriji_aktivne": {
+    "molitvena": {
+      "label": "Molitvene zajednice",
+      "n": 108
+    },
+    "karitativna": {
+      "label": "Karitativne i humanitarne",
+      "n": 87
+    },
+    "bratovstina": {
+      "label": "Bratovštine",
+      "n": 82
+    },
+    "glazba": {
+      "label": "Zborovi i crkvena glazba",
+      "n": 78
+    },
+    "pokret": {
+      "label": "Pokreti i laičke zajednice",
+      "n": 52
+    },
+    "mladi": {
+      "label": "Mladi i studenti",
+      "n": 36
+    },
+    "hodocasnicka": {
+      "label": "Hodočašća",
+      "n": 31
+    },
+    "kultura": {
+      "label": "Kultura i baština",
+      "n": 28
+    },
+    "obitelj": {
+      "label": "Obitelj i život",
+      "n": 22
+    },
+    "zupna": {
+      "label": "Župne udruge",
+      "n": 20
+    },
+    "sport": {
+      "label": "Sport i rekreacija",
+      "n": 18
+    },
+    "strukovna": {
+      "label": "Strukovne (liječnici, učitelji…)",
+      "n": 15
+    },
+    "obrazovanje": {
+      "label": "Obrazovanje i kateheza",
+      "n": 11
+    },
+    "mediji": {
+      "label": "Mediji i nakladništvo",
+      "n": 10
+    },
+    "ostalo": {
+      "label": "Ostalo",
+      "n": 4
+    }
+  },
+  "po_zupaniji_aktivne": {
+    "Grad Zagreb": 164,
+    "Splitsko-dalmatinska": 80,
+    "Dubrovačko-neretvanska": 48,
+    "Zagrebačka": 43,
+    "Osječko-baranjska": 36,
+    "Krapinsko-zagorska": 34,
+    "Primorsko-goranska": 27,
+    "Šibensko-kninska": 21,
+    "Brodsko-posavska": 16,
+    "Istarska": 15,
+    "Varaždinska": 15,
+    "Vukovarsko-srijemska": 15,
+    "Karlovačka": 14,
+    "Sisačko-moslavačka": 14,
+    "Koprivničko-križevačka": 13,
+    "Zadarska": 13,
+    "Međimurska": 9,
+    "Bjelovarsko-bilogorska": 8,
+    "Požeško-slavonska": 8,
+    "Ličko-senjska": 7,
+    "Virovitičko-podravska": 2
+  },
+  "po_biskupiji_aktivne": {
+    "Zagrebačka Nadbiskupija": 242,
+    "Splitsko-makarska Nadbiskupija": 81,
+    "Đakovačko-osječka Nadbiskupija": 62,
+    "Dubrovačka Biskupija - Dioecesis Ragusina": 40,
+    "Varaždinska Biskupija": 34,
+    "Riječka Nadbiskupija": 26,
+    "Požeška Biskupija": 21,
+    "Šibenska Biskupija": 19,
+    "Sisačka Biskupija": 18,
+    "Biskupija Porečka i Pulska": 16,
+    "Zadarska Nadbiskupija": 14,
+    "Gospićko-senjska Biskupija": 14,
+    "Bjelovarsko-križevačka Biskupija": 8,
+    "Hvarska Biskupija": 4,
+    "?": 2,
+    "Biskupija Krk": 1
+  },
+  "osobe": 3450
+}

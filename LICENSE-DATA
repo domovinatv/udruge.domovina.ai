@@ -1,0 +1,23 @@
+Licenca podataka — Creative Commons Attribution 4.0 International (CC-BY-4.0)
+
+Copyright (c) 2026 Matija Stepanić / DOMOVINA
+
+Podaci u ovom repozitoriju (sve pod data/exports/ i frontend/public/data/)
+licencirani su pod CC-BY-4.0. Smiješ ih dijeliti i prerađivati, i komercijalno,
+uz navođenje izvora: "DOMOVINA Udruge — udruge.domovina.ai".
+
+Izvedeni su iz javnih izvora koji imaju vlastite uvjete i koje treba navesti
+zajedno s ovim katalogom:
+
+  * Registar udruga Republike Hrvatske i Registar stranih udruga — Ministarstvo
+    pravosuđa, uprave i digitalne transformacije, objavljeno na data.gov.hr pod
+    Otvorenom dozvolom Republike Hrvatske (navođenje izvora).
+  * Evidencija pravnih osoba Katoličke Crkve u RH — isto ministarstvo, ista dozvola.
+  * Registar prostornih jedinica (adresne točke) — Državna geodetska uprava,
+    INSPIRE WFS, otvoreni podaci uz navođenje izvora.
+  * Registar neprofitnih organizacija — Ministarstvo financija, javni podaci.
+
+Ono što je NAŠE u ovim podacima, a nije ni u jednom izvoru: ocjena „je li
+katolička" (score, pouzdanost, signali), kategorija udruge, koordinate sjedišta
+izabrane između više kandidata i biskupija izvedena iz položaja. To su prosudbe
+ovog projekta, ne službeni podaci, i tako ih treba i navoditi.

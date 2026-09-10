@@ -1,0 +1,19 @@
+[project]
+name = "udruge-domovina-ai"
+version = "0.1.0"
+description = "Katalog katoličkih udruga u Hrvatskoj — civilne udruge iz Registra udruga RH (data.gov.hr), strane udruge i vjernička društva iz Evidencije pravnih osoba Katoličke Crkve; s koordinatama (DGU), biskupijom i kontaktima (RNO)."
+requires-python = ">=3.13"
+dependencies = [
+    "httpx>=0.28.1",
+    "python-dotenv>=1.2.2",
+    "rapidfuzz>=3.14.5",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.4.2",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

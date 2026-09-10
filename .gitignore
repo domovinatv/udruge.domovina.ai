@@ -1,0 +1,24 @@
+.venv/
+__pycache__/
+*.pyc
+.python-version
+.pytest_cache/
+.DS_Store
+.env
+
+# SQLite katalog — regenerira se iz izvora (`make all`)
+data/udruge.db
+data/udruge.db-journal
+data/udruge.db-wal
+data/udruge.db-shm
+# Keš sirovih odgovora izvora (data.gov.hr / DGU / RNO) — 220 MB, ne ide u git
+data/raw/
+
+# .claude/ je lokalan OSIM dijeljenih slash komandi.
+.claude/*
+!.claude/commands/
+.claude/commands/*
+!.claude/commands/*.md
+
+# Statički podaci frontenda — piše ih scripts/34_export_static.py iz baze
+frontend/public/data/
